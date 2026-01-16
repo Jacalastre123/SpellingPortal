@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Bee</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            text-align: center;
+            background-color: yellow;
+            font-family: open sans;
+        }
+
+        div {
+            background-color :rgba(191, 191, 49, 0.753);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        a {
+            background-color: rgb(219, 64, 2);
+        padding: 2px;
+        text-decoration: none;
+        color: black;
+        }
+
+        a:hover {
+        
+        color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Spelling Bee portal</h1>
+
+    <div onclick="speeching()">
+       <h3>Speecher</h3>
+       <p>Click this to make the website speak what ever you say</p>
+       <form>
+        <input type="text" id="say">
+       </form>
+    
+    </div>
+    <div onclick="window.open('https://jacalastre123.github.io/spellingBee')">
+        <h3>Spelling Bee </h3>
+        <p>The true spelling bee, it is set with more than 150 words. This is a good way to truly challenge your mind.</p>
+    </div>
+
+    <div onclick="window.open('https://jacalastre123.github.io/SBMode')">
+        <h3>Spelling Bee Mode edition</h3>
+        <p>This spelling bee has many categories such as countries. It will challenge various parts of your knoledge</p>
+    </div>
+    <hr>
+    <a href="mailto:wtran786@gmail.com">
+        Click to suggest some words
+    </a>
+    <script>
+        const say = document.getElementById("say")
+
+        function speeching() {
+            speechSynthesis.speak(new SpeechSynthesisUtterance(say.value))
+        }
+    </script>
+</body>
+</html>
